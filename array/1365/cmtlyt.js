@@ -1,4 +1,4 @@
-function smallerNumbersThanCurrent(nums: number[]): number[] {
+function smallerNumbersThanCurrent(nums) {
   const map = {}
   void [...nums]
     .sort((a, b) => a - b)
