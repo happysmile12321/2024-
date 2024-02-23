@@ -7,9 +7,8 @@ var removeElement = function (nums, val) {
   let i = 0
   const length = nums.length
   for (let j = 0, value = nums[j]; j < length; value = nums[++j]) {
-    if (value !== val) {
-      nums[i++] = value
-    }
+    if (value === val) continue
+    nums[i++] = value
   }
   return i
 }
