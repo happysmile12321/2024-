@@ -31,17 +31,17 @@ var minSubArrayLen = function (target, nums) {
 //     minLength = Infinity,
 //     left = 0,
 //     right = 0,
-//     isPref = false
+//     changeLeftFlag = false
 //   while (right < loopCount) {
-//     if (!isPref) {
+//     if (!changeLeftFlag) {
 //       sum += nums[right]
 //     }
 //     if (sum >= target) {
 //       minLength = Math.min(minLength, right - left + 1)
 //       sum -= nums[left++]
-//       isPref = true
+//       changeLeftFlag = true
 //     } else {
-//       isPref = false
+//       changeLeftFlag = false
 //       ++right
 //     }
 //   }
