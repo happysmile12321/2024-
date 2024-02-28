@@ -26,3 +26,20 @@ var removeElements = function(head, val) {
     }
     return dummyHead.next
 }
+/* 要新建一个temp去操作删除符合条件的node 返回最后的dummHead.next  他们公用一个数据 */
+
+/* 循环思路 */
+var removeElements = function(head, val) {
+    while(head && head.val === val){
+       head = head.next
+    }
+    let cur = head
+    while(cur){
+        while(cur.next?.val === val){
+            cur.next = cur.next.next
+            
+        }
+        cur = cur.next
+    }
+    return head
+}
