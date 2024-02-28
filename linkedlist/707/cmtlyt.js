@@ -10,7 +10,8 @@ var MyLinkedList = function () {
 };
 
 MyLinkedList.prototype.getNode = function (index) {
-  let curr = new MyLinkedNode(null, this.head);
+  // let curr = new MyLinkedNode(null, this.head);
+  let curr = { next: this.head };
   while (index-- >= 0) curr = curr.next;
   return curr;
 };
